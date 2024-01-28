@@ -1,0 +1,344 @@
+/* DEFAULT CSS RESET START */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+}
+/* Prevent font size inflation */
+html {
+-moz-text-size-adjust: none;
+-webkit-text-size-adjust: none;
+text-size-adjust: none;
+}
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'], 
+ol[role='list'] {
+list-style: none;
+}
+/* Set core body defaults */
+body {
+min-height: 100vh;
+line-height: 1.5;
+font-family: regular-font;
+}
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+line-height: 1.1;
+}
+/* Balance text wrapping on headings */
+h1, h2, h3, h4 {
+text-wrap: balance;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+/* Make images easier to work with */
+img, picture {
+max-width: 100%;
+display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+ font: inherit;
+}
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+min-height: 10em;
+}
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+scroll-margin-block: 5ex;
+}
+/* DEFAULT CSS RESET ENDS */
+
+
+
+
+/* font-face */
+@font-face {
+  font-family: bold-font;
+  src: url(../font/ClashDisplay-Bold.otf);
+}
+@font-face {
+  font-family: regular-font;
+  src: url(../font/ClashDisplay-Regular.otf);
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    width: 90vw;
+    margin-inline: auto;
+}
+
+header{
+    background-color: #10069F;
+    height: 110vh;
+    width: 100vw;
+}
+
+nav{
+   /* background-color: antiquewhite; */
+   height: 4vmax;
+   color: #E5E5E5;
+   /* background-color: antiquewhite; */
+   display: flex;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .container .logo span:nth-child(1){
+    font-family: bold-font;
+    font-size: 1.4vw;
+}
+nav .container .logo a{
+    text-decoration: none;
+}
+nav .container .logo span:nth-child(2){
+    font-size: 1vw;
+}
+nav .container .menu{
+    display: flex;
+    align-items: center;
+    font-size: 1.1vw;
+}
+nav .container .menu a{
+    text-decoration: none;
+}
+nav .container .menu ul {
+    display: flex;
+    gap: 3vw;
+}
+nav .container .menu ul li{
+    list-style: none;
+}
+
+nav .container .menu button{
+     margin-left: 3vw;
+     cursor: pointer;
+     border: none;
+     border-radius: 0.6vw;
+     padding: 0.3vw 1vw
+}
+
+.main_banner{
+    position: relative;
+   /* height: calc(100% - 4vmax); */
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 3vmax;
+}
+.main_banner .my_name{
+    overflow: hidden;
+}
+.main_banner h1{
+    font-size: 15vw;
+    font-family: bold-font;
+    color: #E5E5E5;
+    text-align: center;
+    position: relative;
+}
+
+.main_banner .hi_there::before{ 
+    content: "👋";
+    position: absolute;
+    top: -0;
+    left: 1vw;
+     border-radius: 0.8vw;
+     padding: 0.5vw 1vw;
+    font-size: 10vw;
+}
+.main_banner #name::before{
+    content: "UI Developer & Designer";
+    position: absolute;
+    top:-2vmax;
+    right: 5vw;
+     border-radius: 0.8vw;
+     padding: 0.5vw 1vw;
+    font-size: 2vw;
+    color: #10069F;
+    background-color: #E5E5E5;
+}
+.main_banner .me{
+    position: absolute;
+    /* mix-blend-mode: color-dodge; */
+    mix-blend-mode: lighten;
+    height: 30vmax;
+    opacity: 0.3;
+    scale: 0.5;
+}
+.my_message{
+    position: absolute;
+    bottom: 2vmax;
+    font-size: 2vw;
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+.my_message p{
+     width: 50vw;
+    margin-inline: auto;
+}
+.my_message .bg{
+    background-color: #E5E5E5;
+    color: #10069F;
+    padding: 0.6vw;
+    border-radius: 0.8vw;
+    font-family: bold-font;
+}
+.my_message .work{
+    padding-top: 10vw;
+    display: flex;
+    justify-content: start;
+    white-space: nowrap;
+    gap: 3vw;
+    justify-content: space-between;
+}
+.my_message .work .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+}
+.my_message .work .box img{
+    border-radius: 0.8vw;
+}
+.my_message .work .box{
+    background-color: #E5E5E5;
+    width: 20vw;
+    height: 10vmax;
+    border-radius: 0.8vw;
+    transition: 2s ease-in-out;  
+    cursor: pointer;
+}
+
+.my_message .work .box:hover{
+   clip-path: polygon(48% 9%, 100% 0, 100% 59%, 100% 100%, 0 100%, 0 58%, 0 0);
+}
+
+
+footer{
+    padding: 2vw 0vw;
+}
+footer .links{
+    display: flex;
+    gap: 2vw;
+}
+footer .links a{
+    text-decoration: none;
+}
+
+
+.my_tech{
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    margin-inline: auto;
+    position: absolute;
+    width: 80vw;
+   justify-content: center;
+   gap: 2vw;
+}
+
+.my_tech .box{
+    height: 7vmax;
+    min-width: 12vw;
+    background-color: #E5E5E5;
+    border-radius: 0.8vw;
+    padding: 1vw;
+    display: grid;
+    place-items: center;
+    font-size: 1.5vw;
+}
+
+
+
+.contact_me{
+    height: 80vh;
+    background-color: #E5E5E5;
+    width: 90vw;
+    left: 5vw;
+    margin-inline: auto;
+    position: fixed;
+    top: 5vw;
+    border-radius: 0.8vw;
+    padding: 5vw;
+    overflow: scroll;
+    z-index: 100;
+
+    display: none;
+}
+
+.contact_me.show{
+    display: block;
+    transition: 2s;
+}
+
+.contact_me .content{
+    display: flex;
+}
+.contact_me .left{
+    width: 80%;
+}
+.contact_me .right{
+    width: 40%;
+}
+.contact_me .content h1{
+    font-size: 4vw;
+}
+
+.contact_me .content .top p{
+  color: #484848;
+}
+.contact_me .content h3{
+    margin-top: 3vmax;
+}
+
+.contact_me .right input, textarea{
+    width: 100%;
+    outline: none;
+    margin-bottom: 0.5vmax;
+    border: none;
+    border-radius: 0.6vw;
+    padding: 0.5vw 1.2vw;
+    font-size: 1.2vw;
+}
+.contact_me .right button{
+     cursor: pointer;
+     border: none;
+     border-radius: 0.6vw;
+     padding: 0.3vw 1vw;
+     background-color: #10069F;
+     color: #E5E5E5;
+}
+.contact_me .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    margin: 1vw;
+    padding: 0.5vw;
+    border-radius: 100%;
+    cursor: pointer;
+    
+}
+.contact_me .close img{
+    width: 2vw;
+}
