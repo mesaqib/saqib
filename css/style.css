@@ -180,8 +180,8 @@ nav .container .menu button{
     /* mix-blend-mode: color-dodge; */
     mix-blend-mode: lighten;
     height: 30vmax;
-    opacity: 0.3;
-    scale: 0.5;
+    opacity: 0;
+    scale: 0.2;
 }
 .my_message{
     position: absolute;
